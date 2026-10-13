@@ -42,3 +42,9 @@ Created an independent project directory. Added `index.html` (single-file experi
 ## Recorded film
 
 `solenoid.mp4`: 28.000 s, 1280 × 720, 24 fps, 672 frames. Recorded with the upstream deterministic recorder. Its final `pinkscan` completed cleanly. A six-frame contact sheet extracted from the encoded video (`film-review.jpg`) was inspected to confirm the assembled opening, energized cutaway, exploded assembly, de-energized return and reset states. Silent video, no external music dependency.
+
+## Continuous cycling update
+
+Continuous cycle and slow motion now start enabled on the interactive page. Automatic supply switching uses 65 ms ON and 85 ms OFF of simulation time. At 8% speed the full sequence repeats approximately every 1.88 seconds. It uses the coupled electrical/magnetic/mechanical solver; no arbitrary positional animation was added. Manual power controls disable automatic cycling, and Pause stops both physics and the cycle timer. Film mode retains its original narrated sequence of manual power events.
+
+`tools/validate-cycle.mjs` passed: 7 observed direction reversals, full 0–4 mm travel, rendered plunger position matching the solver, pause freezing both switching and travel, manual hold and release, finite bounded state over 10 simulation seconds, and a visible 42 px mobile cycle control without horizontal overflow. No browser JavaScript errors. Desktop pull-in, spring-return and full mobile screenshots were rendered and inspected in `review/cycle-round1/`. All 15 existing regression checks also passed.

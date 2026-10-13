@@ -16,7 +16,7 @@ assert(model.jam.x===0&&model.jam.q.F>1);pass('Jam gives current and force with 
 assert(model.pullClosed.F>model.pullOpen.F*9);pass('Force increases as gap shrinks at fixed current',{open:model.pullOpen.F,closed:model.pullClosed.F});
 assert(model.early.x<.004);pass('Transient current and travel are integrated',model.early);
 // Exercise actual controls with the render loop running.
-await page.evaluate(()=>{solenoid.reset();solenoid.supply.set(12);solenoid.lab.toggle('run',false)});
+await page.evaluate(()=>{solenoid.reset();solenoid.supply.set(12);solenoid.lab.toggle('run',false);solenoid.lab.toggle('slow',false)});
 await page.getByRole('button',{name:'Energize',exact:true}).click();await page.waitForTimeout(600);assert.equal(await page.getByRole('button',{name:'Energize',exact:true}).getAttribute('aria-pressed'),'true');
 const travel=await page.locator('#travel').innerText();assert.equal(travel,'4.00 mm');pass('Energize button drives UI and 3D stroke',travel);
 await page.getByRole('button',{name:'De-energize',exact:true}).click();await page.waitForTimeout(800);assert.equal(await page.locator('#travel').innerText(),'0.00 mm');pass('De-energize button returns UI and 3D stroke','0.00 mm');

@@ -22,7 +22,11 @@ Internet access is required for pinned **Three.js 0.170.0** and its addon ES mod
 
 ## Controls
 
-- **Energize / De-energize**: connect the selected DC supply or disconnect it with a simulated flyback diode.
+**Continuous cycle is on by default**, together with slow motion. The supply repeatedly switches ON for 65 ms and OFF for 85 ms of simulation time. At 8% speed, each full pull-in/return cycle takes about 1.88 seconds. Current, flux, magnetic pull, plunger travel and spring compression all follow the existing solver. A DC solenoid under steady power pulls in once and holds; the automatic switching creates the repeated strokes.
+
+- **Continuous cycle**: start or stop repeated power switching. Stopping it removes power and lets the spring return the rod.
+
+- **Energize / De-energize**: stop continuous cycling and select manual steady power or power off, with a simulated flyback diode.
 - **DC supply**: 0 to 18 V. Begin at 12 V; try 4 V to see insufficient pull-in force.
 - **Cut away (C)**: half-section through closed solids with material section faces.
 - **Explode (E)**: separate assemblies; field visualization hides while separated.
@@ -30,7 +34,7 @@ Internet access is required for pinned **Three.js 0.170.0** and its addon ES mod
 - **Slow (S)**: advance simulation time at 8% speed. All readings use that same time.
 - **Labels (L)**: part names and live measurements.
 - **Flux**: symbolic closed field loops with directional arrows. These arrows do not represent particles or propagating magnetic material.
-- **Pause / Run (Space)**: stop or resume the simulation clock.
+- **Pause / Run (Space)**: stop or resume both the motion and automatic power-switching clock.
 - **Jam plunger (B)**: mechanically block the rod at zero travel. Click again to reset. Current and force still follow the solver.
 - **Reset view**: restore the camera. Drag to orbit; scroll/pinch to zoom.
 - **How it is computed**: equations, definitions, assumptions and linked sources.
