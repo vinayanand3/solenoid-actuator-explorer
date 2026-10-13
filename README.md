@@ -4,6 +4,8 @@
 
 Author: **vinayanand3**
 
+**[Open the live interactive simulation](https://vinayanand3.github.io/solenoid-actuator-explorer/)**
+
 Interactive cutaway visualization of a DC solenoid demonstrating electrical current, magnetic flux, plunger motion, spring return, and the relationship between air gap and electromagnetic force.
 
 ## Run locally
@@ -112,10 +114,10 @@ node tools/machine/record.mjs index.html review/solenoid.mp4 --w 1280 --h 720 --
 
 Requires Node, Playwright/Chromium and ffmpeg. The film is silent; no music is downloaded or licensed. The recorder performs its magenta-frame scan.
 
-## GitHub Pages deployment, after review and approval
+## GitHub Pages deployment
 
-This project is independent of any steering-system repository. No repository was created, no commit was pushed, and no site was published during local preparation.
+The live site is available at [vinayanand3.github.io/solenoid-actuator-explorer](https://vinayanand3.github.io/solenoid-actuator-explorer/).
 
-After approving the local result, create **vinayanand3/solenoid-actuator-explorer**, put `index.html`, `README.md`, `MACHINE-LICENSE`, `LICENSE` and `.nojekyll` at the repository root, and optionally include the review artifacts and developer tools. In repository Settings → Pages, choose Deploy from a branch, `main`, `/ (root)`. No build workflow is required. The expected URL after deployment is `https://vinayanand3.github.io/solenoid-actuator-explorer/`.
+This project is independent of any steering-system repository. GitHub Pages deploys from the `main` branch at `/ (root)`. Push updates to `main` to redeploy. No build workflow is required.
 
 The authored page has no absolute local paths or dependency on a sibling repository. CDN imports are HTTPS and pinned; the project works beneath the GitHub Pages repository prefix. It needs WebGL and internet access to the documented CDN.
