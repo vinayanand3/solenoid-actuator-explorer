@@ -1,0 +1,7 @@
+node_modules/
+*.tmp-*
+.DS_Store
+review/round1/
+review/round2/
+review/round3/
+review/round1-whole.png

@@ -1,0 +1,247 @@
+{
+  "checks": [
+    {
+      "name": "12 V pull-in",
+      "status": "pass",
+      "evidence": {
+        "travel": 0.004,
+        "current": 0.9999999999999987,
+        "force": 7.895683520871466
+      }
+    },
+    {
+      "name": "Power removed: current decays, spring returns",
+      "status": "pass",
+      "evidence": {
+        "x": 0,
+        "v": 0,
+        "lambda": 0,
+        "on": false,
+        "jam": false,
+        "t": 2.9999999999997025,
+        "i": 0,
+        "q": {
+          "g": 0.0043,
+          "L": 0.01282138434745642,
+          "B": 0,
+          "F": 0,
+          "Fs": 0.6
+        }
+      }
+    },
+    {
+      "name": "4 V stays below spring preload",
+      "status": "pass",
+      "evidence": {
+        "x": 0,
+        "v": 0,
+        "lambda": 0.004273794782485471,
+        "on": true,
+        "jam": false,
+        "t": 0.9999999999999225,
+        "i": 0.3333333333333332
+      }
+    },
+    {
+      "name": "Jam gives current and force with zero travel",
+      "status": "pass",
+      "evidence": {
+        "x": 0,
+        "v": 0,
+        "lambda": 0.01923207652118462,
+        "on": true,
+        "jam": true,
+        "t": 0.9999999999999225,
+        "i": 1.4999999999999993,
+        "q": {
+          "g": 0.0043,
+          "L": 0.01282138434745642,
+          "B": 0.19499540608488364,
+          "F": 1.7110443777393907,
+          "Fs": 0.6
+        }
+      }
+    },
+    {
+      "name": "Force increases as gap shrinks at fixed current",
+      "status": "pass",
+      "evidence": {
+        "open": 0.7604641678841741,
+        "closed": 7.895683520871486
+      }
+    },
+    {
+      "name": "Transient current and travel are integrated",
+      "status": "pass",
+      "evidence": {
+        "x": 0.001518015263792262,
+        "v": 0.11066416918129492,
+        "lambda": 0.0155904481490745,
+        "on": true,
+        "jam": false,
+        "t": 0.02999999999999993,
+        "i": 0.9775389815752935
+      }
+    },
+    {
+      "name": "Energize button drives UI and 3D stroke",
+      "status": "pass",
+      "evidence": "4.00 mm"
+    },
+    {
+      "name": "De-energize button returns UI and 3D stroke",
+      "status": "pass",
+      "evidence": "0.00 mm"
+    },
+    {
+      "name": "All five view/time controls respond",
+      "status": "pass",
+      "evidence": "explode, cut, x-ray, slow, labels"
+    },
+    {
+      "name": "Flux overlay toggle",
+      "status": "pass",
+      "evidence": "off"
+    },
+    {
+      "name": "Desktop measured rendering",
+      "status": "pass",
+      "evidence": {
+        "fps": 37.248902488285275,
+        "triangles": 121672,
+        "parts": 629
+      }
+    },
+    {
+      "name": "390 px mobile layout: no horizontal overflow, touch controls",
+      "status": "pass",
+      "evidence": {
+        "overflow": false,
+        "buttons": [
+          {
+            "text": "Energize",
+            "width": 154,
+            "height": 42
+          },
+          {
+            "text": "De-energize",
+            "width": 154,
+            "height": 42
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mobile energize control",
+      "status": "pass",
+      "evidence": "4.00 mm"
+    },
+    {
+      "name": "Physics explanation opens on mobile",
+      "status": "pass",
+      "evidence": "equations and assumptions available"
+    },
+    {
+      "name": "No browser JavaScript errors",
+      "status": "pass",
+      "evidence": []
+    }
+  ],
+  "model": {
+    "C": {
+      "mu0": 1.2566370614359173e-06,
+      "N": 600,
+      "A": 0.00011309733552923255,
+      "R": 12,
+      "ge": 0.0015,
+      "g0": 0.0043,
+      "stroke": 0.004,
+      "k": 250,
+      "pre": 0.6,
+      "c": 1.6,
+      "m": 0.02608496004385789,
+      "leak": 0.004
+    },
+    "on": {
+      "x": 0.004,
+      "v": 0,
+      "lambda": 0.03242446067513731,
+      "on": true,
+      "jam": false,
+      "t": 1.9999999999998124,
+      "i": 0,
+      "q": {
+        "g": 0.0002999999999999999,
+        "L": 0.03242446067513735,
+        "B": 0.41887902047863856,
+        "F": 7.895683520871466,
+        "Fs": 1.6
+      }
+    },
+    "off": {
+      "x": 0,
+      "v": 0,
+      "lambda": 0,
+      "on": false,
+      "jam": false,
+      "t": 2.9999999999997025,
+      "i": 0,
+      "q": {
+        "g": 0.0043,
+        "L": 0.01282138434745642,
+        "B": 0,
+        "F": 0,
+        "Fs": 0.6
+      }
+    },
+    "low": {
+      "x": 0,
+      "v": 0,
+      "lambda": 0.004273794782485471,
+      "on": true,
+      "jam": false,
+      "t": 0.9999999999999225,
+      "i": 0.3333333333333332
+    },
+    "jam": {
+      "x": 0,
+      "v": 0,
+      "lambda": 0.01923207652118462,
+      "on": true,
+      "jam": true,
+      "t": 0.9999999999999225,
+      "i": 1.4999999999999993,
+      "q": {
+        "g": 0.0043,
+        "L": 0.01282138434745642,
+        "B": 0.19499540608488364,
+        "F": 1.7110443777393907,
+        "Fs": 0.6
+      }
+    },
+    "pullOpen": {
+      "g": 0.0043,
+      "L": 0.01282138434745642,
+      "B": 0.1299969373899225,
+      "F": 0.7604641678841741,
+      "Fs": 0.6
+    },
+    "pullClosed": {
+      "g": 0.0002999999999999999,
+      "L": 0.03242446067513735,
+      "B": 0.4188790204786391,
+      "F": 7.895683520871486,
+      "Fs": 1.6
+    },
+    "early": {
+      "x": 0.001518015263792262,
+      "v": 0.11066416918129492,
+      "lambda": 0.0155904481490745,
+      "on": true,
+      "jam": false,
+      "t": 0.02999999999999993,
+      "i": 0.9775389815752935
+    }
+  },
+  "errors": []
+}

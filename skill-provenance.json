@@ -1,0 +1,20 @@
+{
+  "repository": "https://github.com/AirsupHQ/machine-skill",
+  "commit": "537bb665ab03f29ad4f4124b8af76cbfda47a6c9",
+  "installed_for": "Codex",
+  "installed_path": "/Users/vinay/.agents/skills/machine",
+  "install_command": "npx skills add AirsupHQ/machine-skill -g -a codex -y",
+  "sha256": {
+    "SKILL.md": "77dce1e38324be3a81bc90d2c9e448251a301d936e47392698de58da90ab4ddd",
+    "kit/lab-kit.js": "23e97a49c92d3362e1e9f6f374a24dbd8b121ef8fa97435654ebdb52aae9b303",
+    "kit/template.html": "ec10cfb01f1b673e2f27ab7fec1921b85d415169edd241a30b008d41b385e26d",
+    "scripts/shot.mjs": "affdf0584c66d1bdeb2d4bdac2ea635fb4d51194a29f43fb514aac84cfb4efab",
+    "scripts/record.mjs": "fa7377c00e7187bc11f900cd181b5ae32c191383e17614afa1fdaf3682be2722"
+  },
+  "local_runtime_changes": [
+    "Responsive educational UI and keyboard/touch controls",
+    "Lower shadow resolution and AO sampling for frame rate",
+    "Real half-profile section meshes for major coaxial solids",
+    "Mobile camera offset and label bounds"
+  ]
+}
